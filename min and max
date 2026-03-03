@@ -1,0 +1,24 @@
+import numpy
+
+N, M = map(int, input().split())
+
+
+running_list = []
+
+for _ in range(N):
+    row = list(map(int, input().split()))
+    running_list.append(row)
+
+
+my_array = numpy.array(running_list, int)
+
+min_along_axis_1 = numpy.min(my_array, axis=1)
+
+
+max_of_mins = numpy.max(min_along_axis_1, axis=None)
+
+
+print(max_of_mins)
+
+
+
