@@ -1,0 +1,11 @@
+import numpy
+
+# Required for platform alignment/formatting
+numpy.set_printoptions(legacy='1.13')
+
+# Parse space-separated N and M
+n, m = map(int, input().split())
+
+# Print the N x M matrix with main diagonal 1s
+print(numpy.eye(n, m))
+
