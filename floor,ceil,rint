@@ -1,0 +1,14 @@
+import numpy
+
+numpy.set_printoptions(legacy='1.13')
+
+# Read input, convert to a list of floats, and create a numpy array
+input_str = input()
+a = numpy.array(input_str.split(), dtype=float)
+
+# Print floor, ceil, and rint of the array A
+print(numpy.floor(a))
+print(numpy.ceil(a))
+print(numpy.rint(a))
+
+
