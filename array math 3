@@ -1,0 +1,19 @@
+import numpy
+# Legacy formatting ensures the output matches HackerRank's expected space alignment
+numpy.set_printoptions(legacy='1.13')
+
+n, m = map(int, input().split())
+
+# Read arrays using list comprehension
+a = numpy.array([input().split() for _ in range(n)], int)
+b = numpy.array([input().split() for _ in range(n)], int)
+
+# Use parentheses for all print statements
+print(a + b)
+print(a - b)
+print(a * b)
+print(a // b)     # Use // for integer division in Python 3
+print(a % b)
+print(a ** b)
+
+
