@@ -1,0 +1,14 @@
+
+import numpy
+
+# Read input and convert to a tuple of integers for the shape
+shape = tuple(map(int, input().split()))
+
+# Create and print the array of zeros with integer type
+# Use numpy.int for compatibility across Python versions
+zeros_array = numpy.zeros(shape, dtype=int)
+print(zeros_array)
+
+# Create and print the array of ones with integer type
+ones_array = numpy.ones(shape, dtype=int)
+print(ones_array)
