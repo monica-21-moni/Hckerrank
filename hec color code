@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+import sys
+
+# Read number of lines
+n = int(sys.stdin.readline())
+in_block = False
+color_regex = r'(?<=[:\s])(#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3})'
+
+for _ in range(n):
+    line = sys.stdin.readline()
+    if '{' in line:
+        in_block = True
+    elif '}' in line:
+        in_block = False
+    
+    if in_block:
+        # Find all valid hex codes within the CSS property line
+        matches = re.findall(color_regex, line)
+        for match in matches:
+            print(match)
