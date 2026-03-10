@@ -1,0 +1,35 @@
+# Read the number of elements (not strictly needed for the set creation but part of input format)
+n = int(input())
+
+# Read the space-separated elements and convert to a set of integers
+s = set(map(int, input().split()))
+
+# Read the number of commands
+N = int(input())
+
+# Process each command
+for _ in range(N):
+    # Read the command line and split into parts (command name and optional value)
+    command_parts = input().split()
+    
+    # Get the command name
+    command = command_parts[0]
+    
+    # Check the command type and execute
+    if command == 'pop':
+        s.pop()
+    elif command == 'remove':
+        # The value is in the second part of the list, convert to int
+        value = int(command_parts[1])
+        # Use try-except to avoid KeyError if the element is not present, though the problem states it should not happen for remove in this specific task context
+        try:
+            s.remove(value)
+        except KeyError:
+            pass # Or handle as required by specific platform constraints if different from problem description
+    elif command == 'discard':
+        # The value is in the second part of the list, convert to int
+        value = int(command_parts[1])
+        s.discard(value)
+
+# Print the sum of the elements remaining in the set
+print(sum(s))
