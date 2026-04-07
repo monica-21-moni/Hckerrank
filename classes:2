@@ -1,0 +1,13 @@
+import numpy
+# Get the dimension N
+n = int(input())
+
+# Read matrix A
+a = numpy.array([list(map(int, input().split())) for _ in range(n)])
+
+# Read matrix B
+b = numpy.array([list(map(int, input().split())) for _ in range(n)])
+
+# Compute and print the matrix product
+print(numpy.dot(a, b))
+
