@@ -1,0 +1,12 @@
+cube = lambda x:x**3 # complete the lambda function 
+
+def fibonacci(n):
+   # Initial sequence starts with 0 and 1
+    # Note: Handle cases for n=0 and n=1 if necessary
+    fib_list = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_list.append(a)
+        # Update values: a becomes b, b becomes the sum
+        a, b = b, a + b
+    return fib_list
