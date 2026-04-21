@@ -1,0 +1,49 @@
+def main():
+    try:
+        data_str = input("Enter numbers separated by spaces: ")
+        my_list = [float(x) for x in data_str.split()]
+          if not my_list:
+            print("The list is empty. Please restart and provide numbers.")
+            return
+    except ValueError:
+        print("Invalid input. Please enter only numbers.")
+        return
+ while True:
+        print("\n--- List Operations Menu ---")
+        print("1. Find Minimum and Maximum")
+        print("2. Count occurrences of each element")
+        print("3. Find first and last occurrence of an element")
+        print("4. Exit")
+         choice = input("Select an option (1-4): ")
+     if choice == 
+print(f"Minimum: {min(my_list)}")
+            print(f"Maximum: {max(my_list)}")
+ elif choice == '2':
+     counts = {item: my_list.count(item) for item in set(my_list)}
+            print("Element counts:")
+            for item, count in counts.items():
+                print(f"  {item}: {count}")
+elif choice == '3':
+            try:
+                target = float(input("Enter element to search: "))
+                if target in my_list:
+             first = my_list.index(target)
+                    
+                    last = len(my_list) - 1 - my_list[::-1].index(target)
+                    print(f"First occurrence at index: {first}")
+                    print(f"Last occurrence at index: {last}")
+                else:
+                    print(f"Element {target} not found in the list.")
+            except ValueError:
+                print("Invalid search value.")
+
+        elif choice == '4':
+            print("Exiting program...")
+            break
+        else:
+            print("Invalid choice! Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
