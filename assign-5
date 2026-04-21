@@ -1,0 +1,10 @@
+ages = [20, 15, 45, 30, 60]  # Example list of patient ages
+total_earnings = 0
+for age in ages:
+    if age < 17:
+        total_earnings += 200
+    elif 17 <= age <= 40:
+        total_earnings += 400
+    else:
+        total_earnings += 300
+print(f"Total earnings for the day: {total_earnings} INR")
