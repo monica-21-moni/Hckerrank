@@ -1,0 +1,12 @@
+interior_walls = int(input("Enter number of Interior walls: "))
+exterior_walls = int(input("Enter number of Exterior walls: "))
+total_cost = 0
+if interior_walls > 0:
+    for i in range(interior_walls):
+        area = float(input(f"Enter surface area of Interior Wall {i+1}: "))
+        total_cost += area * 18
+if exterior_walls > 0:
+    for i in range(exterior_walls):
+        area = float(input(f"Enter surface area of Exterior Wall {i+1}: "))
+        total_cost += area * 12
+print(f"Total estimated Cost: Rs. {total_cost:.1f}")
