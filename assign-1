@@ -1,0 +1,15 @@
+temperature = input("Enter temperature (warm/cold): ").lower()
+humidity = input("Enter humidity (dry/humid): ").lower()
+
+if temperature == "warm":
+    if humidity == "dry":
+        print("Play Basketball")
+    elif humidity == "humid":
+        print("Play Tennis")
+elif temperature == "cold":
+    if humidity == "dry":
+        print("Play Cricket")
+    elif humidity == "humid":
+        print("Swim")
+else:
+    print("Invalid input.")
