@@ -1,0 +1,10 @@
+import numpy as np
+
+# Input coefficients
+coeffs = [1.1, 2, 3]
+# Input value to evaluate at
+x = 0
+
+# Using polyval to evaluate
+result = np.polyval(coeffs, x)
+print(result)
